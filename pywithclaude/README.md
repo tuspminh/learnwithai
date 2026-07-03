@@ -14,18 +14,31 @@
 
 ##Giai đoạn 2 — Trung cấp
 11. Làm việc với File
+
 12. Module & Package
-13. Lập trình hướng đối tượng (OOP) — nền tảng
-14. OOP nâng cao: kế thừa, đa hình, encapsulation
-15. Iterator, Generator, Decorator
-16. Comprehension nâng cao & lập trình hàm (functional)
-17. Thư viện chuẩn hữu ích (datetime, os, re, json...)
+13. 
+14. Lập trình hướng đối tượng (OOP) — nền tảng
+15. 
+16. OOP nâng cao: kế thừa, đa hình, encapsulation
+17. 
+18. Iterator, Generator, Decorator
+19. 
+20. Comprehension nâng cao & lập trình hàm (functional)
+21. 
+22. Thư viện chuẩn hữu ích (datetime, os, re, json...)
 
 ##Giai đoạn 3 — Nâng cao & thực chiến
 18. Quản lý môi trường ảo, pip, dependency
+
 19. Làm việc với API (requests, HTTP)
-20. Cơ sở dữ liệu (SQLite, ORM cơ bản)
-21. Testing (unittest, pytest)
-22. Async/await — lập trình bất đồng bộ
-23. Clean code, type hints, best practices
-24. Định hướng chuyên sâu: Web (Flask/Django), Data (Pandas/NumPy), Automation, AI
+20. 
+21. Cơ sở dữ liệu (SQLite, ORM cơ bản)
+22. 
+23. Testing (unittest, pytest)
+24. 
+25. Async/await — lập trình bất đồng bộ
+26. 
+27. Clean code, type hints, best practices
+28. 
+29. Định hướng chuyên sâu: Web (Flask/Django), Data (Pandas/NumPy), Automation, AI
+30. 
