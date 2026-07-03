@@ -54,7 +54,12 @@ Tạo file tên `bai1.py`, gõ đúng nội dung sau:
 python
 
 ```text-x-trilium-auto
-# Đây là comment - dòng chú thích, Python sẽ bỏ qua, không thực thi # Comment dùng để giải thích code cho người đọc (kể cả chính bạn sau này)  print("Xin chào, tôi đang học Python!") print("Hôm nay là ngày đầu tiên của hành trình.")  # Thử một chút tính toán print(5 + 3)
+# Đây là comment - dòng chú thích, Python sẽ bỏ qua, không thực thi 
+# Comment dùng để giải thích code cho người đọc (kể cả chính bạn sau này)  
+print("Xin chào, tôi đang học Python!") 
+print("Hôm nay là ngày đầu tiên của hành trình.")  
+# Thử một chút tính toán 
+print(5 + 3)
 ```
 
 Chạy bằng cách mở terminal tại thư mục chứa file, gõ:
@@ -87,7 +92,9 @@ Hôm nay là ngày đầu tiên của hành trình.
 python
 
 ```text-x-trilium-auto
-if 5 > 3:     print("5 lớn hơn 3")   # dòng này PHẢI thụt vào 4 dấu cách print("Dòng này không thụt lề")
+if 5 > 3:     
+    print("5 lớn hơn 3")   # dòng này PHẢI thụt vào 4 dấu cách 
+print("Dòng này không thụt lề")
 ```
 
 Nếu bạn thụt lề sai (thiếu hoặc thừa khoảng trắng), Python sẽ báo lỗi `IndentationError`. Quy ước chuẩn: **4 dấu cách** cho mỗi cấp thụt lề (không dùng Tab trộn với Space).
