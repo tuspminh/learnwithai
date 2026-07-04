@@ -1,8 +1,7 @@
+[01_hello_py](01_hello_py.md)    [03_string](03_string.md)
+---
 ### Bài 2: Biến, Kiểu dữ liệu và Toán tử
 
-Trước khi vào bài, tôi ghi nhận yêu cầu của bạn: từ giờ tôi sẽ giảng với vai trò một giảng viên + lập trình viên chuyên nghiệp — đi sâu vào bản chất, kèm ví dụ thực tế cập nhật (không chỉ `x = 5` khô khan), và giải thích luôn *tại sao Python thiết kế như vậy* để bạn hiểu tư duy ngôn ngữ, không chỉ học vẹt cú pháp.
-
----
 
 #### 1. Biến (Variable) — bản chất thực sự
 
@@ -318,3 +317,6 @@ Viết file `bai_tap_2.py` mô phỏng **hóa đơn mua hàng đơn giản**:
 Gợi ý nâng độ khó: thử dùng toán tử `%` để kiểm tra nếu `so_luong` là số chẵn thì tặng thêm 1 sản phẩm miễn phí.
 
 Làm xong gửi code cho tôi xem, tôi sẽ review và mình chuyển sang **Bài 3: Chuỗi (String) và xử lý văn bản** — nơi bạn sẽ học cách cắt chuỗi, tìm kiếm, thay thế, và các kỹ thuật xử lý text dùng nhiều trong xử lý dữ liệu thực tế (làm sạch dữ liệu, xử lý input người dùng...).
+
+---
+[01_hello_py](01_hello_py.md)    [03_string](03_string.md)
