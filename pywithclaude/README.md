@@ -5,15 +5,15 @@
 ### **Giai đoạn 1 — Nền tảng cốt lõi**
 
 1. [Python là gì, cài đặt môi trường, chạy chương trình đầu tiên](01_hello_py.md)
-2. Biến, kiểu dữ liệu, toán tử
-3. Chuỗi (String) và xử lý văn bản
-4. Cấu trúc rẽ nhánh (if/elif/else)
-5. Vòng lặp (for, while)
-6. List (danh sách)
-7. Tuple & Set
-8. Dictionary
-9. Hàm (Function)
-10. Xử lý lỗi (Exception handling)
+2. [Biến, kiểu dữ liệu, toán tử](02_variable_datatype_operators.md)
+3. [Chuỗi (String) và xử lý văn bản](03_string.md)
+4. [Cấu trúc rẽ nhánh (if/elif/else)](04_if_control_flow.md)
+5. [Vòng lặp (for, while)](05_for_while_loop.md)
+6. [List (danh sách)](06_list.md)
+7. [Tuple & Set](07_tuple_set.md)
+8. [Dictionary](08_dict.md)
+9. [Hàm (Function)](09_function.md)
+10. [Xử lý lỗi (Exception handling)](10_exception_handling.md)
 
 ## **Giai đoạn 2 — Trung cấp**
 
