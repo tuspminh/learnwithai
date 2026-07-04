@@ -1,5 +1,3 @@
-Khóa học Python từ Cơ bản đến Chuyên gia
-
 # Buổi 8: Làm chủ vòng lặp for từ cơ bản đến nâng cao
 
 ## Mục tiêu buổi học
@@ -15,9 +13,9 @@ Sau buổi học này, bạn sẽ:
 * Biết cách viết vòng lặp theo phong cách Pythonic.
 * Áp dụng vào các bài toán thực tế.
 
----
 
-# 1. for là gì?
+
+## 1. for là gì?
 
 Rất nhiều người mới học nghĩ rằng:
 
@@ -46,7 +44,7 @@ như trong C hoặc Java.
 
 Đây là một điểm khác biệt rất lớn của Python.
 
----
+
 
 # 2. Iterable là gì?
 
@@ -70,7 +68,6 @@ o
 ↓
 n
 ```
-⸻
 
 Ví dụ với list:
 ```
@@ -84,9 +81,9 @@ Python sẽ lấy:
 ↓
 30
 ```
-⸻
 
-3. Ví dụ đầu tiên
+
+## 3. Ví dụ đầu tiên
 ```
 for number in [10, 20, 30]:
     print(number)
@@ -97,17 +94,16 @@ Kết quả
 20
 30
 ```
-⸻
 
-4. range()
+## 4. range()
 
 Đây là thứ được dùng nhiều nhất.
 ```
 range(start, stop, step)
 ```
-⸻
 
-Chỉ có stop
+
+**Chỉ có stop**
 ```
 for i in range(5):
     print(i)
@@ -124,9 +120,8 @@ Lưu ý
 
 Không có số 5.
 
-⸻
 
-Có start
+**Có start**
 ```
 for i in range(1, 6):
     print(i)
@@ -136,9 +131,9 @@ for i in range(1, 6):
 4
 5
 ```
-⸻
 
-Có step
+
+**Có step**
 
 for i in range(2, 11, 2):
     print(i)
@@ -148,9 +143,9 @@ for i in range(2, 11, 2):
 8
 10
 
-⸻
 
-Đếm ngược
+
+**Đếm ngược**
 
 for i in range(10, 0, -1):
     print(i)
@@ -160,256 +155,248 @@ for i in range(10, 0, -1):
 ...
 1
 
-⸻
 
-5. range() thực chất là gì?
+
+## 5. range() thực chất là gì?
 
 Nhiều người tưởng:
-
+```
 range(1000000000)
-
+```
 tạo ra một danh sách khổng lồ.
 
 Không phải.
-
+```
 r = range(1000000000)
-
+```
 Nó chỉ tạo một đối tượng range, sinh giá trị khi cần (lazy evaluation).
 
 Ví dụ:
-
+```
 print(range(5))
-
+```
 Kết quả:
-
+```
 range(0, 5)
-
+```
 Nếu muốn chuyển thành danh sách:
-
+```
 print(list(range(5)))
 [0, 1, 2, 3, 4]
+```
 
-⸻
-
-6. Duyệt chuỗi
-
+## 6. Duyệt chuỗi
+```
 text = "Python"
 for ch in text:
     print(ch)
-
+```
 Kết quả
-
+```
 P
 y
 t
 h
 o
 n
+```
 
-⸻
-
-7. Duyệt List
-
+## 7. Duyệt List
+```
 fruits = ["Táo", "Cam", "Xoài"]
 for fruit in fruits:
     print(fruit)
+```
 
-⸻
-
-8. Duyệt Tuple
-
+## 8. Duyệt Tuple
+```
 point = (10, 20)
 for value in point:
     print(value)
+```
 
-⸻
 
-9. Duyệt Set
-
+## 9. Duyệt Set
+```
 numbers = {3, 1, 2}
 for number in numbers:
     print(number)
-
+```
 Lưu ý:
 
 Set không đảm bảo thứ tự.
 
-⸻
 
-10. Duyệt Dictionary
-
+## 10. Duyệt Dictionary
+```
 student = {
     "name": "An",
     "age": 20,
     "major": "CNTT"
 }
-
-Chỉ lấy key
-
+```
+- Chỉ lấy key
+```
 for key in student:
     print(key)
+```
 
-⸻
-
-Lấy value
-
+- Lấy value
+```
 for value in student.values():
     print(value)
+```
 
-⸻
-
-Lấy cả key và value
-
+- Lấy cả key và value
+```
 for key, value in student.items():
     print(key, value)
-
+```
 Kết quả
-
+```
 name An
 age 20
 major CNTT
-
+```
 Đây là cách được sử dụng nhiều nhất khi làm việc với từ điển.
 
-⸻
 
-11. enumerate()
+
+## 11. enumerate()
 
 Rất quan trọng.
 
 Thông thường
-
+```
 fruits = ["Táo", "Cam", "Xoài"]
 index = 0
 for fruit in fruits:
     print(index, fruit)
     index += 1
-
+```
 Pythonic
-
+```
 for index, fruit in enumerate(fruits):
     print(index, fruit)
-
+```
 Kết quả
-
+```
 0 Táo
 1 Cam
 2 Xoài
-
+```
 Có thể bắt đầu từ 1:
-
+```
 for index, fruit in enumerate(fruits, start=1):
     print(index, fruit)
+```
 
-⸻
 
-12. zip()
+## 12. zip()
 
 Ghép nhiều iterable lại với nhau.
-
+```
 names = ["An", "Bình", "Lan"]
 scores = [8.5, 7.0, 9.0]
 for name, score in zip(names, scores):
     print(name, score)
-
+```
 Kết quả
-
+```
 An 8.5
 Bình 7.0
 Lan 9.0
-
-Ứng dụng:
+```
+**Ứng dụng:**
 
 * Ghép tên và điểm.
 * Ghép sản phẩm và giá.
 * Ghép từ vựng và nghĩa.
 * Ghép câu hỏi và đáp án.
 
-⸻
 
-13. reversed()
-
+## 13. reversed()
+```
 for i in reversed(range(5)):
     print(i)
 
-Kết quả
-
+Output:
 4
 3
 2
 1
 0
+```
 
-⸻
 
-14. sorted()
-
+## 14. sorted()
+```
 numbers = [5, 1, 9, 3]
 for n in sorted(numbers):
     print(n)
+>>
 1
 3
 5
 9
-
+```
 Sắp xếp giảm dần:
-
+```
 for n in sorted(numbers, reverse=True):
     print(n)
+```
 
-⸻
 
-15. break
-
+## 15. break
+```
 for i in range(10):
     if i == 5:
         break
     print(i)
+```
 
-⸻
 
-16. continue
-
+## 16. continue
+```
 for i in range(6):
     if i == 3:
         continue
     print(i)
 
 Kết quả
-
 0
 1
 2
 4
 5
+```
 
-⸻
 
-17. for...else
+## 17. for...else
 
 Ít người biết.
-
+```
 for i in range(3):
     print(i)
 else:
     print("Hoàn thành.")
-
+```
 Nếu có break:
-
+```
 for i in range(5):
     if i == 3:
         break
 else:
     print("Done")
-
+```
 else sẽ không chạy.
 
 Điều này tương tự while...else mà bạn đã học ở buổi trước.
 
-⸻
 
-18. Vòng lặp lồng nhau
 
+## 18. Vòng lặp lồng nhau
+```
 for i in range(3):
     for j in range(3):
         print(i, j)
@@ -421,8 +408,9 @@ Kết quả
 0 2
 1 0
 ...
+```
 
-Ứng dụng:
+**Ứng dụng:**
 
 * Ma trận.
 * Bảng cửu chương.
@@ -430,16 +418,15 @@ Kết quả
 * Game 2D.
 * Sudoku.
 
-⸻
 
-19. Hiểu về Iterator
-
-Khi viết:
+## 19. Hiểu về Iterator
+```
+# Khi viết:
 
 for x in [10, 20, 30]:
     print(x)
 
-Python thực hiện gần giống như:
+# Python thực hiện gần giống như:
 
 it = iter([10, 20, 30])
 while True:
@@ -448,82 +435,75 @@ while True:
         print(x)
     except StopIteration:
         break
-
+```
 Điều này giải thích vì sao rất nhiều đối tượng trong Python đều có thể dùng với for.
 
-⸻
 
-20. So sánh for và while
+## 20. So sánh for và while
 
-for	while
-Biết dữ liệu cần duyệt	✔️
-Duyệt list, tuple, dict	✔️
-Duyệt file	✔️
-Đếm bằng range()	✔️
-Chưa biết số lần lặp	
-Chờ nhập dữ liệu	
-Chờ kết nối mạng	
-Server chạy liên tục	
+|for|while|
+|:---|:---|
+|Biết dữ liệu cần duyệt	✔️    |Chưa biết số lần lặp|
+|Duyệt list, tuple, dict	✔️|Chờ nhập dữ liệu|
+|Duyệt file	✔️                |Chờ kết nối mạng|
+|Đếm bằng range()	✔️        | Server chạy liên tục|
+	
 
-⸻
-
-21. Pythonic
-
-Không nên:
+## 21. Pythonic
+```
+# Không nên:
 
 numbers = [10, 20, 30]
 for i in range(len(numbers)):
     print(numbers[i])
 
-Nên:
+# Nên:
 
 for number in numbers:
     print(number)
 
-Nếu cần chỉ số:
+# Nếu cần chỉ số:
 
 for index, number in enumerate(numbers):
     print(index, number)
-
+```
 Đây là cách viết được khuyến nghị trong hầu hết các dự án Python.
 
-⸻
 
-22. Ví dụ thực tế
+
+## 22. Ví dụ thực tế
 
 Tính tổng đơn hàng
-
+```
 prices = [120000, 50000, 75000]
 total = 0
 for price in prices:
     total += price
 print(f"Tổng tiền: {total:,} VNĐ")
-
-⸻
+```
 
 Tìm sản phẩm đắt nhất
-
+```
 prices = [120000, 50000, 75000]
 max_price = prices[0]
 for price in prices:
     if price > max_price:
         max_price = price
 print(f"Giá cao nhất: {max_price:,} VNĐ")
-
-⸻
+```
 
 Đếm số nguyên âm trong câu
-
+```
 text = "Python Programming"
 count = 0
 for ch in text.lower():
     if ch in "aeiou":
         count += 1
 print("Số nguyên âm:", count)
+```
 
-⸻
 
-23. Những lỗi phổ biến
+## 23. Những lỗi phổ biến
 
 Lỗi 1: Quên dùng items() khi duyệt dictionary
 
@@ -558,27 +538,27 @@ for n in numbers:
 
 ⸻
 
-24. Bài tập thực hành
+## 24. Bài tập thực hành
 
-Bài 1
+### Bài 1
 
 In các số từ 1 đến 100.
 
 ⸻
 
-Bài 2
+### Bài 2
 
 In các số chẵn từ 2 đến 50.
 
 ⸻
 
-Bài 3
+### Bài 3
 
 Tính tổng các số từ 1 đến 100.
 
 ⸻
 
-Bài 4
+### Bài 4
 
 In bảng cửu chương từ 2 đến 9.
 
@@ -586,7 +566,7 @@ Gợi ý: Dùng vòng lặp lồng nhau.
 
 ⸻
 
-Bài 5
+### Bài 5
 
 Cho danh sách:
 
@@ -600,7 +580,7 @@ scores = [8.5, 7.0, 9.5, 6.0, 8.0]
 
 ⸻
 
-Bài 6
+### Bài 6
 
 Cho dictionary:
 
@@ -614,7 +594,7 @@ In toàn bộ khóa và giá trị.
 
 ⸻
 
-Bài 7
+### Bài 7
 
 Cho hai danh sách:
 
@@ -629,7 +609,7 @@ Anh: 9.0
 
 ⸻
 
-Mini Project: Hệ thống quản lý điểm sinh viên
+### Mini Project: Hệ thống quản lý điểm sinh viên
 
 Viết chương trình:
 
@@ -643,7 +623,7 @@ Viết chương trình:
 5. Dùng enumerate() để đánh số thứ tự.
 
 Ví dụ:
-
+```
 =============================
 DANH SÁCH ĐIỂM
 =============================
@@ -655,12 +635,12 @@ DANH SÁCH ĐIỂM
 Cao nhất     : 9.0
 Thấp nhất    : 7.0
 =============================
-
+```
 ⸻
 
-Tổng kết buổi 8
+## Tổng kết buổi 8
 
-Bạn đã học được:
+**Bạn đã học được:**
 
 * ✅ Bản chất của for.
 * ✅ Khái niệm Iterable và Iterator.
@@ -676,11 +656,11 @@ Bạn đã học được:
 
 ⸻
 
-Góc lập trình viên chuyên nghiệp
+## Góc lập trình viên chuyên nghiệp
 
 Trong các dự án Python thực tế, for là vòng lặp được sử dụng nhiều nhất vì phần lớn công việc là xử lý tập dữ liệu: đọc file, duyệt kết quả truy vấn cơ sở dữ liệu, xử lý JSON, API, danh sách người dùng hoặc bản ghi.
 
-Một nguyên tắc quan trọng là:
+### Một nguyên tắc quan trọng là:
 
 * Ưu tiên duyệt trực tiếp phần tử (for item in items) khi không cần chỉ số.
 * Dùng enumerate() khi cần cả chỉ số và phần tử.
@@ -688,6 +668,6 @@ Một nguyên tắc quan trọng là:
 
 Điều này giúp mã nguồn ngắn gọn, dễ đọc và đúng với phong cách Python.
 
-Chuẩn bị cho Buổi 9
+### Chuẩn bị cho Buổi 9
 
 Ở buổi tiếp theo, chúng ta sẽ học hàm (Functions) – một trong những nền tảng quan trọng nhất của lập trình. Bạn sẽ học cách định nghĩa hàm, tham số, giá trị trả về, phạm vi biến (scope), *args, **kwargs, type hints và cách thiết kế các hàm chuyên nghiệp theo chuẩn Python hiện đại. Đây là bước chuyển từ “viết script” sang “viết phần mềm”.
