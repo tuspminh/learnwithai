@@ -1,8 +1,8 @@
 Khóa học Python từ Cơ bản đến Chuyên gia
 
-Buổi 8: Làm chủ vòng lặp for từ cơ bản đến nâng cao
+# Buổi 8: Làm chủ vòng lặp for từ cơ bản đến nâng cao
 
-Mục tiêu buổi học
+## Mục tiêu buổi học
 
 Sau buổi học này, bạn sẽ:
 
@@ -30,14 +30,18 @@ Bản chất của for trong Python là:
 Lặp qua từng phần tử của một đối tượng có thể lặp (Iterable).
 
 Ví dụ:
+
 '''
 for item in iterable:
     ...
 '''
+
 Không phải:
+
 '''
 for(i=0;i<n;i++)
 '''
+
 như trong C hoặc Java.
 
 Đây là một điểm khác biệt rất lớn của Python.
