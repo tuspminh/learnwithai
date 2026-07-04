@@ -31,16 +31,16 @@ Lặp qua từng phần tử của một đối tượng có thể lặp (Iterab
 
 Ví dụ:
 
-'''
+```
 for item in iterable:
     ...
-'''
+```
 
 Không phải:
 
-'''
+```
 for(i=0;i<n;i++)
-'''
+```
 
 như trong C hoặc Java.
 
@@ -53,11 +53,11 @@ như trong C hoặc Java.
 Một Iterable là đối tượng có thể được duyệt từng phần tử.
 
 Ví dụ:
-
+```
 text = "Python"
-
+```
 Python sẽ lấy lần lượt:
-'''
+```
 P
 ↓
 y
@@ -69,28 +69,28 @@ h
 o
 ↓
 n
-'''
+```
 ⸻
 
 Ví dụ với list:
-
+```
 numbers = [10, 20, 30]
-
+```
 Python sẽ lấy:
-
+```
 10
 ↓
 20
 ↓
 30
-
+```
 ⸻
 
 3. Ví dụ đầu tiên
-
+```
 for number in [10, 20, 30]:
     print(number)
-
+```
 Kết quả
 
 10
