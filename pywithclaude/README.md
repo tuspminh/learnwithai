@@ -17,13 +17,13 @@
 
 ## **Giai đoạn 2 — Trung cấp**
 
-11. Làm việc với File  
-12. Module & Package  
-13. Lập trình hướng đối tượng (OOP) — nền tảng  
-14. OOP nâng cao: kế thừa, đa hình, encapsulation  
-15. Iterator, Generator, Decorator  
-16. Comprehension nâng cao & lập trình hàm (functional)  
-17. Thư viện chuẩn hữu ích (datetime, os, re, json...)
+11. [Làm việc với File](11_file.md) 
+12. [Module & Package](12_module_package.md)
+13. [Lập trình hướng đối tượng (OOP) — nền tảng](13_oop.md)
+14. [OOP nâng cao: kế thừa, đa hình, encapsulation](14_oop_adv.md)
+15. [Iterator, Generator, Decorator](15_iterator_generator_decorator.md)
+16. [Comprehension nâng cao & lập trình hàm (functional)](16_comprehension_adv_func_programming.md) 
+17. [Thư viện chuẩn hữu ích (datetime, os, re, json...)](17_std_lib_a.md)
 
 ### **Giai đoạn 3 — Nâng cao & thực chiến**
 
