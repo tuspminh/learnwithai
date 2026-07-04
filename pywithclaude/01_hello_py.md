@@ -30,7 +30,7 @@ Mở Terminal (macOS/Linux) hoặc Command Prompt/PowerShell (Windows), gõ:
 
 bash
 
-```text-x-trilium-auto
+```bash
 python --version
 ```
 
@@ -38,7 +38,7 @@ hoặc trên macOS/Linux đôi khi cần:
 
 bash
 
-```text-x-trilium-auto
+```bash
 python3 --version
 ```
 
@@ -53,12 +53,14 @@ Tạo file tên `bai1.py`, gõ đúng nội dung sau:
 
 python
 
-```text-x-trilium-auto
-# Đây là comment - dòng chú thích, Python sẽ bỏ qua, không thực thi 
-# Comment dùng để giải thích code cho người đọc (kể cả chính bạn sau này)  
-print("Xin chào, tôi đang học Python!") 
-print("Hôm nay là ngày đầu tiên của hành trình.")  
-# Thử một chút tính toán 
+```python
+# Đây là comment - dòng chú thích, Python sẽ bỏ qua, không thực thi
+# Comment dùng để giải thích code cho người đọc (kể cả chính bạn sau này)
+
+print("Xin chào, tôi đang học Python!")
+print("Hôm nay là ngày đầu tiên của hành trình.")
+
+# Thử một chút tính toán
 print(5 + 3)
 ```
 
@@ -66,13 +68,13 @@ Chạy bằng cách mở terminal tại thư mục chứa file, gõ:
 
 bash
 
-```text-x-trilium-auto
+```bash
 python bai1.py
 ```
 
 **Kết quả mong đợi:**
 
-```text-x-trilium-auto
+```
 Xin chào, tôi đang học Python!
 Hôm nay là ngày đầu tiên của hành trình.
 8
@@ -80,10 +82,10 @@ Hôm nay là ngày đầu tiên của hành trình.
 
 #### 4. Giải phẫu đoạn code trên — hiểu từng phần
 
-- `**print()**` là một **hàm (function)** có sẵn của Python, dùng để in giá trị ra màn hình. Cặp ngoặc `()` là nơi bạn "đưa" dữ liệu vào cho hàm xử lý — gọi là **tham số (argument)**.
+- **`print()`** là một **hàm (function)** có sẵn của Python, dùng để in giá trị ra màn hình. Cặp ngoặc `()` là nơi bạn "đưa" dữ liệu vào cho hàm xử lý — gọi là **tham số (argument)**.
 - **Chuỗi văn bản (string)** phải được bao trong dấu nháy `"..."` hoặc `'...'`. Python coi đây là kiểu dữ liệu văn bản.
-- `**5 + 3**` không có dấu nháy → Python hiểu đây là **số (number)**, và thực hiện phép cộng thực sự, kết quả là `8`.
-- **Không có dấu chấm phẩy** `**;**` cuối dòng như C/Java — Python dùng **dấu xuống dòng** để biết một lệnh đã kết thúc.
+- **`5 + 3`** không có dấu nháy → Python hiểu đây là **số (number)**, và thực hiện phép cộng thực sự, kết quả là `8`.
+- **Không có dấu chấm phẩy `;`** cuối dòng như C/Java — Python dùng **dấu xuống dòng** để biết một lệnh đã kết thúc.
 
 #### 5. Quy tắc thụt lề (Indentation) — điều SỐNG CÒN trong Python
 
@@ -91,9 +93,9 @@ Hôm nay là ngày đầu tiên của hành trình.
 
 python
 
-```text-x-trilium-auto
-if 5 > 3:     
-    print("5 lớn hơn 3")   # dòng này PHẢI thụt vào 4 dấu cách 
+```python
+if 5 > 3:
+    print("5 lớn hơn 3")   # dòng này PHẢI thụt vào 4 dấu cách
 print("Dòng này không thụt lề")
 ```
 
@@ -108,3 +110,5 @@ Hãy tạo file `bai_tap_1.py` và viết chương trình:
 1. In ra dòng chữ giới thiệu tên bạn (ví dụ: `"Tôi tên là Minh"`)
 2. In ra kết quả phép tính: tuổi bạn nhân 2
 3. Thêm ít nhất 1 dòng comment giải thích code
+
+Bạn thử làm rồi gửi kết quả cho tôi xem nhé — tôi sẽ nhận xét và chúng ta chuyển sang **Bài 2: Biến, kiểu dữ liệu và toán tử**, nơi bạn sẽ hiểu sâu về cách Python lưu trữ và thao tác dữ liệu.
