@@ -13,8 +13,12 @@ Trong Python, `str` là một **chuỗi bất biến (immutable sequence)** các
 
 python
 
-```text-x-trilium-auto
-ten = "Python" # ten[0] = "J"   # ❌ Lỗi: TypeError: 'str' object does not support item assignment  ten_moi = "J" + ten[1:]   # ✅ Tạo chuỗi mới: "Jython" print(ten_moi)
+```python
+ten = "Python"
+# ten[0] = "J"   # ❌ Lỗi: TypeError: 'str' object does not support item assignment
+
+ten_moi = "J" + ten[1:]   # ✅ Tạo chuỗi mới: "Jython"
+print(ten_moi)
 ```
 
 **Tại sao Python thiết kế string bất biến?** Vì tính an toàn và hiệu năng — chuỗi được dùng làm khóa (key) trong dictionary rất nhiều (Bài 8), mà key phải là dữ liệu không đổi để đảm bảo tính toàn vẹn của cấu trúc dữ liệu. Đây là kiến thức nền quan trọng, bạn sẽ thấy áp dụng lại khi học về `dict` và `set`.
@@ -27,16 +31,25 @@ Mỗi ký tự trong chuỗi có chỉ số (index), **bắt đầu từ 0**:
 
 python
 
-```text-x-trilium-auto
-ten_cty = "Anthropic" #          A  n  t  h  r  o  p  i  c #          0  1  2  3  4  5  6  7  8 #         -9 -8 -7 -6 -5 -4 -3 -2 -1   (index âm - đếm từ cuối)  print(ten_cty[0])    # 'A' print(ten_cty[4])    # 'r' print(ten_cty[-1])   # 'c'  - ký tự cuối cùng print(ten_cty[-2])   # 'i'  - ký tự áp chót
+```python
+ten_cty = "Anthropic"
+#          A  n  t  h  r  o  p  i  c
+#          0  1  2  3  4  5  6  7  8
+#         -9 -8 -7 -6 -5 -4 -3 -2 -1   (index âm - đếm từ cuối)
+
+print(ten_cty[0])    # 'A'
+print(ten_cty[4])    # 'r'
+print(ten_cty[-1])   # 'c'  - ký tự cuối cùng
+print(ten_cty[-2])   # 'i'  - ký tự áp chót
 ```
 
 **Index âm** cực kỳ hữu dụng thực tế — ví dụ lấy đuôi file mà không cần biết độ dài chuỗi:
 
 python
 
-```text-x-trilium-auto
-ten_file = "bao_cao_thang_6.pdf" print(ten_file[-3:])   # 'pdf' - 3 ký tự cuối
+```python
+ten_file = "bao_cao_thang_6.pdf"
+print(ten_file[-3:])   # 'pdf' - 3 ký tự cuối
 ```
 
 ---
@@ -47,8 +60,14 @@ Cú pháp: `chuoi[bat_dau:ket_thuc:buoc_nhay]`. Đây là công cụ bạn dùng
 
 python
 
-```text-x-trilium-auto
-email = "nguyen.van.a@company.com"  print(email[0:12])      # 'nguyen.van.a'  - từ index 0 đến 11 (không lấy 12) print(email[13:])       # 'company.com'   - từ index 13 đến hết print(email[:12])       # 'nguyen.van.a'  - từ đầu đến trước index 12 print(email[::-1])      # đảo ngược toàn bộ chuỗi print(email[::2])       # lấy mỗi 2 ký tự một lần (bước nhảy = 2)
+```python
+email = "nguyen.van.a@company.com"
+
+print(email[0:12])      # 'nguyen.van.a'  - từ index 0 đến 11 (không lấy 12)
+print(email[13:])       # 'company.com'   - từ index 13 đến hết
+print(email[:12])       # 'nguyen.van.a'  - từ đầu đến trước index 12
+print(email[::-1])      # đảo ngược toàn bộ chuỗi
+print(email[::2])       # lấy mỗi 2 ký tự một lần (bước nhảy = 2)
 ```
 
 **Lưu ý quan trọng**: `ket_thuc` là **chỉ số KHÔNG được bao gồm** (exclusive) — đây là quy tắc thống nhất trong toàn bộ Python (list, range... đều theo quy tắc này), nên nhớ kỹ ngay từ đầu.
@@ -57,8 +76,11 @@ email = "nguyen.van.a@company.com"  print(email[0:12])      # 'nguyen.van.a'  - 
 
 python
 
-```text-x-trilium-auto
-email = "user@gmail.com" vi_tri_at = email.index("@") domain = email[vi_tri_at + 1:] print(domain)   # 'gmail.com'
+```python
+email = "user@gmail.com"
+vi_tri_at = email.index("@")
+domain = email[vi_tri_at + 1:]
+print(domain)   # 'gmail.com'
 ```
 
 ---
@@ -73,64 +95,115 @@ String trong Python có hàng chục method sẵn có. Dưới đây là nhóm b
 
 python
 
-```text-x-trilium-auto
-raw_input = "   Nguyễn Văn A   "  print(raw_input.strip())        # 'Nguyễn Văn A' - xóa khoảng trắng đầu/cuối print(raw_input.lstrip())       # xóa khoảng trắng bên trái print(raw_input.rstrip())       # xóa khoảng trắng bên phải  email = "USER@GMAIL.COM" print(email.lower())            # 'user@gmail.com' - chuyển chữ thường print(email.upper())            # in hoa toàn bộ print("python".capitalize())    # 'Python' - viết hoa chữ đầu print("hello world".title())    # 'Hello World' - viết hoa đầu mỗi từ
+```python
+raw_input = "   Nguyễn Văn A   "
+
+print(raw_input.strip())        # 'Nguyễn Văn A' - xóa khoảng trắng đầu/cuối
+print(raw_input.lstrip())       # xóa khoảng trắng bên trái
+print(raw_input.rstrip())       # xóa khoảng trắng bên phải
+
+email = "USER@GMAIL.COM"
+print(email.lower())            # 'user@gmail.com' - chuyển chữ thường
+print(email.upper())            # in hoa toàn bộ
+print("python".capitalize())    # 'Python' - viết hoa chữ đầu
+print("hello world".title())    # 'Hello World' - viết hoa đầu mỗi từ
 ```
 
 **Ứng dụng thực tế cực kỳ phổ biến**: khi xây dựng hệ thống đăng ký tài khoản, bạn luôn phải chuẩn hóa email trước khi so sánh/lưu database, để tránh trường hợp `User@Gmail.com` và `user@gmail.com` bị coi là 2 tài khoản khác nhau:
 
 python
 
-```text-x-trilium-auto
-def chuan_hoa_email(email_input):     return email_input.strip().lower()  email1 = chuan_hoa_email("  User@Gmail.com  ") email2 = chuan_hoa_email("user@gmail.com") print(email1 == email2)   # True - giờ so sánh chính xác
+```python
+def chuan_hoa_email(email_input):
+    return email_input.strip().lower()
+
+email1 = chuan_hoa_email("  User@Gmail.com  ")
+email2 = chuan_hoa_email("user@gmail.com")
+print(email1 == email2)   # True - giờ so sánh chính xác
 ```
 
 ##### b) Tìm kiếm & kiểm tra nội dung
 
 python
 
-```text-x-trilium-auto
-cau = "Python là ngôn ngữ lập trình phổ biến nhất năm 2026"  print("Python" in cau)              # True - kiểm tra có chứa không print(cau.startswith("Python"))     # True - kiểm tra bắt đầu bằng print(cau.endswith("2026"))         # True - kiểm tra kết thúc bằng print(cau.find("ngôn ngữ"))         # 10 - trả về vị trí, -1 nếu không tìm thấy print(cau.count("n"))               # đếm số lần xuất hiện ký tự/chuỗi con
+```python
+cau = "Python là ngôn ngữ lập trình phổ biến nhất năm 2026"
+
+print("Python" in cau)              # True - kiểm tra có chứa không
+print(cau.startswith("Python"))     # True - kiểm tra bắt đầu bằng
+print(cau.endswith("2026"))         # True - kiểm tra kết thúc bằng
+print(cau.find("ngôn ngữ"))         # 10 - trả về vị trí, -1 nếu không tìm thấy
+print(cau.count("n"))               # đếm số lần xuất hiện ký tự/chuỗi con
 ```
 
 **Ứng dụng thực tế** — validate định dạng file upload, một tình huống rất phổ biến trong xây dựng web app:
 
 python
 
-```text-x-trilium-auto
-ten_file = "bao_cao_quy2.pdf" dinh_dang_cho_phep = (".pdf", ".docx", ".xlsx")  if ten_file.lower().endswith(dinh_dang_cho_phep):     print("File hợp lệ") else:     print("Chỉ chấp nhận PDF, Word, Excel")
+```python
+ten_file = "bao_cao_quy2.pdf"
+dinh_dang_cho_phep = (".pdf", ".docx", ".xlsx")
+
+if ten_file.lower().endswith(dinh_dang_cho_phep):
+    print("File hợp lệ")
+else:
+    print("Chỉ chấp nhận PDF, Word, Excel")
 ```
 
 ##### c) Thay thế & tách/ghép chuỗi
 
 python
 
-```text-x-trilium-auto
-thong_bao = "Đơn hàng #12345 đang được xử lý" thong_bao_moi = thong_bao.replace("đang được xử lý", "đã giao thành công") print(thong_bao_moi)  # split() - tách chuỗi thành list, cực kỳ hay dùng khi xử lý dữ liệu CSV/log du_lieu = "Lan,25,Hà Nội,Nhân viên" thong_tin = du_lieu.split(",") print(thong_tin)   # ['Lan', '25', 'Hà Nội', 'Nhân viên']  # join() - ngược lại với split(), ghép list thành chuỗi danh_sach_tu = ["Python", "rất", "thú", "vị"] cau_hoan_chinh = " ".join(danh_sach_tu) print(cau_hoan_chinh)   # 'Python rất thú vị'
+```python
+thong_bao = "Đơn hàng #12345 đang được xử lý"
+thong_bao_moi = thong_bao.replace("đang được xử lý", "đã giao thành công")
+print(thong_bao_moi)
+
+# split() - tách chuỗi thành list, cực kỳ hay dùng khi xử lý dữ liệu CSV/log
+du_lieu = "Lan,25,Hà Nội,Nhân viên"
+thong_tin = du_lieu.split(",")
+print(thong_tin)   # ['Lan', '25', 'Hà Nội', 'Nhân viên']
+
+# join() - ngược lại với split(), ghép list thành chuỗi
+danh_sach_tu = ["Python", "rất", "thú", "vị"]
+cau_hoan_chinh = " ".join(danh_sach_tu)
+print(cau_hoan_chinh)   # 'Python rất thú vị'
 ```
 
 **Ứng dụng thực tế** — đây chính là kỹ thuật nền tảng để **parse file CSV/log** trước khi bạn học thư viện `csv` chuyên dụng sau này:
 
 python
 
-```text-x-trilium-auto
-dong_log = "2026-07-03 14:32:01 | ERROR | Kết nối database thất bại" cac_phan = dong_log.split(" | ") thoi_gian, muc_do, noi_dung = cac_phan   # unpacking - sẽ học kỹ ở Bài 6 print(f"[{muc_do}] {noi_dung} vào lúc {thoi_gian}")
+```python
+dong_log = "2026-07-03 14:32:01 | ERROR | Kết nối database thất bại"
+cac_phan = dong_log.split(" | ")
+thoi_gian, muc_do, noi_dung = cac_phan   # unpacking - sẽ học kỹ ở Bài 6
+print(f"[{muc_do}] {noi_dung} vào lúc {thoi_gian}")
 ```
 
 ##### d) Kiểm tra kiểu nội dung
 
 python
 
-```text-x-trilium-auto
-print("12345".isdigit())      # True - toàn số print("Python3".isalpha())    # False - có chứa số nên không phải toàn chữ print("Python".isalpha())     # True print("password123".isalnum())# True - chỉ chữ và số, không ký tự đặc biệt
+```python
+print("12345".isdigit())      # True - toàn số
+print("Python3".isalpha())    # False - có chứa số nên không phải toàn chữ
+print("Python".isalpha())     # True
+print("password123".isalnum())# True - chỉ chữ và số, không ký tự đặc biệt
 ```
 
 **Ứng dụng thực tế** — validate input trước khi ép kiểu, tránh crash chương trình:
 
 python
 
-```text-x-trilium-auto
-tuoi_input = input("Nhập tuổi của bạn: ")  if tuoi_input.isdigit():     tuoi = int(tuoi_input)     print(f"Bạn {tuoi} tuổi") else:     print("Vui lòng chỉ nhập số")
+```python
+tuoi_input = input("Nhập tuổi của bạn: ")
+
+if tuoi_input.isdigit():
+    tuoi = int(tuoi_input)
+    print(f"Bạn {tuoi} tuổi")
+else:
+    print("Vui lòng chỉ nhập số")
 ```
 
 ---
@@ -141,8 +214,23 @@ tuoi_input = input("Nhập tuổi của bạn: ")  if tuoi_input.isdigit():     
 
 python
 
-```text-x-trilium-auto
-ten_sp = "Bàn phím cơ" gia = 1250000 so_luong = 3  # Căn chỉnh và định dạng số print(f"{ten_sp:<20} | {gia:>10,.0f} VNĐ") # 'Bàn phím cơ          |  1,250,000 VNĐ' # <20 = căn trái, độ rộng 20 ký tự # >10 = căn phải, độ rộng 10 ký tự # ,.0f = thêm dấu phẩy ngăn cách hàng nghìn, không lấy số thập phân  ty_le_hoan_thanh = 0.874 print(f"Tiến độ: {ty_le_hoan_thanh:.1%}")   # 'Tiến độ: 87.4%'  # Debug nhanh - Python 3.8+ hỗ trợ "=" để in cả tên biến lẫn giá trị print(f"{gia=}")   # 'gia=1250000' - cực tiện khi debug thay vì print("gia:", gia)
+```python
+ten_sp = "Bàn phím cơ"
+gia = 1250000
+so_luong = 3
+
+# Căn chỉnh và định dạng số
+print(f"{ten_sp:<20} | {gia:>10,.0f} VNĐ")
+# 'Bàn phím cơ          |  1,250,000 VNĐ'
+# <20 = căn trái, độ rộng 20 ký tự
+# >10 = căn phải, độ rộng 10 ký tự
+# ,.0f = thêm dấu phẩy ngăn cách hàng nghìn, không lấy số thập phân
+
+ty_le_hoan_thanh = 0.874
+print(f"Tiến độ: {ty_le_hoan_thanh:.1%}")   # 'Tiến độ: 87.4%'
+
+# Debug nhanh - Python 3.8+ hỗ trợ "=" để in cả tên biến lẫn giá trị
+print(f"{gia=}")   # 'gia=1250000' - cực tiện khi debug thay vì print("gia:", gia)
 ```
 
 Tính năng `{gia=}` là một "mẹo nhà nghề" ít tài liệu cơ bản nhắc đến nhưng dev chuyên nghiệp dùng liên tục để debug nhanh mà không cần gõ tên biến hai lần.
@@ -157,21 +245,21 @@ Viết file `bai_tap_3.py` mô phỏng **hệ thống kiểm tra thông tin đă
 
 python
 
-```text-x-trilium-auto
+```python
    raw_data = "  NGUYEN.VAN.A@GMAIL.COM , MatKhau123  "
 ```
 
 2. Tách chuỗi này thành `email` và `mat_khau` (dùng `split(",")`), sau đó `strip()` từng phần
 3. Chuẩn hóa `email` về chữ thường
 4. Kiểm tra:
-   - Email có chứa ký tự `@` không (dùng `in`)
-   - Mật khẩu có `isalnum()` không (chỉ chữ và số) — nếu không, in cảnh báo
-   - Độ dài mật khẩu có `>= 8` không (dùng `len()`)
+  - Email có chứa ký tự `@` không (dùng `in`)
+  - Mật khẩu có `isalnum()` không (chỉ chữ và số) — nếu không, in cảnh báo
+  - Độ dài mật khẩu có `>= 8` không (dùng `len()`)
 5. In kết quả bằng f-string dạng báo cáo, ví dụ:
 
-```text-x-trilium-auto
+```
    Email: nguyen.van.a@gmail.com   -> Hợp lệ
    Mật khẩu: ***********           -> Đạt yêu cầu độ dài, Đạt yêu cầu định dạng
 ```
 
-
+Làm xong gửi cho tôi xem nhé. Sau đó ta sang **Bài 4: Cấu trúc rẽ nhánh (if/elif/else)** — nền tảng để chương trình bạn viết có thể "ra quyết định" thay vì chỉ chạy tuần tự từ trên xuống dưới.
