@@ -1,3 +1,4 @@
+[Roadmap](00_roadmap.md)    [02_variable_datatype_operators](02_variable_datatype_operators.md)
 ### Bài 1: Python là gì? Cài đặt môi trường & chương trình đầu tiên
 
 #### 1. Python là gì và tại sao nó phổ biến?
@@ -112,3 +113,5 @@ Hãy tạo file `bai_tap_1.py` và viết chương trình:
 3. Thêm ít nhất 1 dòng comment giải thích code
 
 Bạn thử làm rồi gửi kết quả cho tôi xem nhé — tôi sẽ nhận xét và chúng ta chuyển sang **Bài 2: Biến, kiểu dữ liệu và toán tử**, nơi bạn sẽ hiểu sâu về cách Python lưu trữ và thao tác dữ liệu.
+
+[Roadmap](00_roadmap.md)    [02_variable_datatype_operators](02_variable_datatype_operators.md)
