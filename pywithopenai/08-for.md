@@ -116,9 +116,7 @@ Kết quả
 3
 4
 ```
-Lưu ý
-
-Không có số 5.
+Lưu ý: Không có số 5.
 
 
 **Có start**
@@ -134,7 +132,7 @@ for i in range(1, 6):
 
 
 **Có step**
-
+```
 for i in range(2, 11, 2):
     print(i)
 2
@@ -142,11 +140,11 @@ for i in range(2, 11, 2):
 6
 8
 10
-
+```
 
 
 **Đếm ngược**
-
+```
 for i in range(10, 0, -1):
     print(i)
 10
@@ -154,7 +152,7 @@ for i in range(10, 0, -1):
 8
 ...
 1
-
+```
 
 
 ## 5. range() thực chất là gì?
