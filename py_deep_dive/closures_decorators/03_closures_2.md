@@ -10,8 +10,8 @@
 
 *Bài viết này yêu cầu kiến thức tiên quyết về scopes, namespaces, closures trong Python. Nếu bạn chưa tự tin, thì nên đọc trước 2 bài viết dưới đây (theo thứ tự):*
 
-- [*Phần 1*](https://medium.com/@huulinhcvp/python-deep-dive-hi%E1%BB%83u-closures-decorators-v%C3%A0-c%C3%A1c-%E1%BB%A9ng-d%E1%BB%A5ng-c%E1%BB%A7a-ch%C3%BAng-ph%E1%BA%A7n-1-8a371418c0cb)
-- [*Phần 2*](https://medium.com/@huulinhcvp/python-deep-dive-hi%E1%BB%83u-closures-decorators-v%C3%A0-c%C3%A1c-%E1%BB%A9ng-d%E1%BB%A5ng-c%E1%BB%A7a-ch%C3%BAng-ph%E1%BA%A7n-2-7f7592634c38)
+- [*Phần 1*](01_scopes.md)
+- [*Phần 2*](02_closures.md)
 
 ## Closure
 
