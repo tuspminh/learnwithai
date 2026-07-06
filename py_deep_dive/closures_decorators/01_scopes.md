@@ -1,3 +1,5 @@
+### Python Deep Dive: Hiểu closures, decorators và các ứng dụng của chúng — Phần 1
+
 *Trong lập trình với Python thì Functional Programming đóng một vai trò vô cùng quan trọng và các functions trong Python là các* ***first-class citizens****. Điều đó có nghĩa là chúng ta có thể vận hành các functions giống như các objects khác:
 
 - *Truyền các function giống như các đối số.*
