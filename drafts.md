@@ -11,3 +11,8 @@ https://medium.com/@huulinhcvp/python-deep-dive-hi%E1%BB%83u-closures-decorators
 https://medium.com/@huulinhcvp/python-deep-dive-hi%E1%BB%83u-closures-decorators-v%C3%A0-c%C3%A1c-%E1%BB%A9ng-d%E1%BB%A5ng-c%E1%BB%A7a-ch%C3%BAng-ph%E1%BA%A7n-3-871e7d2be141
 
 https://medium.com/@huulinhcvp/python-deep-dive-hi%E1%BB%83u-closures-decorators-v%C3%A0-c%C3%A1c-%E1%BB%A9ng-d%E1%BB%A5ng-c%E1%BB%A7a-ch%C3%BAng-ph%E1%BA%A7n-4-1692310f9384
+
+others:
+
+https://www.laptrinhdientu.com/2025/10/python-decorator.html?m=1
+
