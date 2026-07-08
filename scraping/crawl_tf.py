@@ -28,7 +28,7 @@ def crawl_novel_links():
     # phân trang, lấy max số đuôi của url ra số trang, lấy tiếp duyệt từ 2
     page_items = soup.select('div.container div.text-center.pagination-container ul.pagination.pagination-sm li a')
     print(f'{len(page_items) if page_items else 0} pages found')
-    print(f'page_items: {"\n".join([item.get("href") for item in page_items])}')
+    print(f'page_items: {"\n".join([item.get("href") for item in page_items if item.get("href") and item.get("href") not in "javascript:void(0)"])}')
     # duyệt phân trang trước, xong lấy duyệt từng page lấy hêt link
 
 def crawl_novel(novel_url):
