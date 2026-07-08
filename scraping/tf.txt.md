@@ -1,3 +1,13 @@
+danh-sach: 0 ->  pages
+
+page : novels
+
+novel: title, author. chapters (cover), dédcription
+
+chapter: chapter-no, c-tite, content
+
+
+
 tf 
 
 |----page<novels[pages]>
