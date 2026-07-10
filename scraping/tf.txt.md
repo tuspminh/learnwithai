@@ -1,3 +1,7 @@
+crawl list, dựa vào số cuối để phán đoán link list
+2 là cào từng page lấy page tiếp theo cho tới hết không còn page nào nữa
+
+
 danh-sach: 0 ->  pages
 
 page : novels
